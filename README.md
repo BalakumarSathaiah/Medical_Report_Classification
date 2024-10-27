@@ -12,8 +12,8 @@ This project is a Medical Report Classification and Query System that extracts t
 
 ## Requirements
 
-- Python 3.8+
-- Libraries and models required:
+- **Python 3.8+**
+- **Libraries and models required**:
   - `fastapi`
   - `uvicorn`
   - `spacy`
@@ -75,6 +75,36 @@ This project is a Medical Report Classification and Query System that extracts t
 
     ```bash
     python test_api.py
+    ```
+
+## Running with Docker
+
+1. **Build the Docker image**:
+
+    ```bash
+    docker build -t medical-report-classification .
+    ```
+
+2. **Run the Docker container**:
+
+    ```bash
+    docker run -d -p 8000:8000 medical-report-classification
+    ```
+
+    This will start the FastAPI server in a Docker container accessible at `http://127.0.0.1:8000`.
+
+3. **Stopping the Docker container**:
+
+    List running containers to find the container ID:
+
+    ```bash
+    docker ps
+    ```
+
+    Then stop the container:
+
+    ```bash
+    docker stop <container_id>
     ```
 
 ## API Endpoints
