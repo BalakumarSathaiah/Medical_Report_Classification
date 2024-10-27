@@ -1,4 +1,3 @@
-# pdf_extractor.py
 import fitz  # PyMuPDF
 
 def extract_text_from_pdf(pdf_path):
@@ -8,8 +7,3 @@ def extract_text_from_pdf(pdf_path):
         for page in pdf_file:
             text += page.get_text()
     return text
-
-if __name__ == "__main__":
-    pdf_path = input("Enter the PDF file path: ")
-    extracted_text = extract_text_from_pdf(pdf_path)
-    print("Extracted Text:\n", extracted_text)

@@ -1,4 +1,3 @@
-# text_classifier.py
 from transformers import pipeline
 
 def classify_document(text, labels, threshold=0.1):
@@ -18,11 +17,3 @@ def classify_document(text, labels, threshold=0.1):
         "labels": filtered_labels,
         "scores": filtered_scores
     }
-
-
-if __name__ == "__main__":
-    document_text = input("Enter the document text: ")
-    labels = ["medical report", "diagnosis", "prescription", "lab results", "invoice"]
-    classification = classify_document(document_text, labels)
-    print("Classification Result:\n", classification)
-
